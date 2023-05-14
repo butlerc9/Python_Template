@@ -1,3 +1,1 @@
-__all__ = [
-    'activation_funcs'
-]
+__all__ = ["activation_funcs"]
