@@ -1,0 +1,7 @@
+# all of these are installed via mamba (conda wrapper)
+# pandas-profiling
+pytest
+
+# need to be installed if you are using minimal notebook
+torch # for conda this package is called pytorch
+pandas
