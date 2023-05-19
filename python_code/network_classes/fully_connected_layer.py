@@ -11,17 +11,18 @@ class fully_connected_layer:
         self.activation = np.matmul(input_array, self.weights) + self.bias
         return self.activation
 
-    def backpropagation(self, input_gradient: np.array) -> np.array:
+    def back_propagation(self, input_gradient: np.array) -> np.array:
         self.gradient = self.weights * input_gradient
         return self.gradient
 
     def update_weights(self, learning_rate: float, input_gradient: np.array) -> None:
-        number_of_observations_part_of_batch = size(input_gradient)[0]
+        number_of_observations_part_of_batch = np.shape(input_gradient)[0]
         average_gradient = (
-            sum(np.matmul(self.weights, input_gradient))
+            sum(np.dot(self.weights, input_gradient))
             / number_of_observations_part_of_batch
         )
-        self.weights = -average_gradient * learning_rate
+        change_in_weights = -1.0 * average_gradient * learning_rate
+        self.weights += change_in_weights
 
     def update_bias(self, learning_rate: float, input_gradient: np.array) -> None:
-        self.bias *= -1 * learning_rate * input_gradient
+        self.bias *= -1.0 * learning_rate * input_gradient
