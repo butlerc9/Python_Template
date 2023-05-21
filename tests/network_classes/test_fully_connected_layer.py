@@ -18,7 +18,6 @@ def test_fully_connected_layer_feed_forward_matrix_of_ones():
 
     assert np.array_equal(output, np.array([[3, 3, 3], [3, 3, 3], [3, 3, 3]]))
 
-
 def test_fully_connected_layer_feed_forward_matrix_of_ones():
     layer = fully_connected_layer(2, 3)
 

@@ -1,8 +1,14 @@
+# Ignore data sources
+# uncommented for sample repo
+data/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 .vscode/
+
+
 
 # C extensions
 *.so
@@ -178,6 +184,3 @@ bundles/
 vendor/pkg/
 pyenv
 Vagrantfile
-
-# Ignore data sources
-data/

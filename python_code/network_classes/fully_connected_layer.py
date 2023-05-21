@@ -21,8 +21,7 @@ class fully_connected_layer:
             sum(np.dot(self.weights, input_gradient))
             / number_of_observations_part_of_batch
         )
-        change_in_weights = -1.0 * average_gradient * learning_rate
-        self.weights += change_in_weights
+        self.weights -= average_gradient * learning_rate
 
     def update_bias(self, learning_rate: float, input_gradient: np.array) -> None:
-        self.bias *= -1.0 * learning_rate * input_gradient
+        self.bias -= learning_rate * input_gradient
