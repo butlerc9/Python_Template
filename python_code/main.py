@@ -1,15 +1,10 @@
-import numpy as np
+# TODO
+# - write test feed forward for activation layer
+# - feed forward for activation layer
+# - write test back prop for activation layer
+# - back prop for activation layer
+# - write test feed forward for fully connected
+# - feed forward for fully connected
+# - write test back prop for fully connected
 
-from helper_functions.activation_funcs import *
-from network_classes.activation_layer import activation_layer
-from network_classes.fully_connected_layer import fully_connected_layer
-from network_classes.network import network
-
-
-net = network(784, 10)
-
-net.add_layer(fully_connected_layer(784, 10))
-net.add_layer(activation_layer(sigmoid,der_sigmoid))
-net.add_layer(fully_connected_layer(10, 10))
-net.add_layer(activation_layer(sigmoid,der_sigmoid))
-
+print(1)
